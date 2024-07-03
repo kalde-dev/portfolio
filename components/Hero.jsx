@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 import { Download, Send } from "lucide-react";
 
 import {
-  RiBriefcaseFill,
+  RiBriefcase4Fill,
   RiTeamFill,
   RiTodoFill,
   RiArrowDownSLine,
@@ -39,7 +39,20 @@ const Hero = () => {
               </Button>
             </div>
           </div>
-          <div className="hidden xl:flex relative">Image</div>
+          <div className="hidden xl:flex relative">
+            <Badge
+              containerStyles="absolute top-[24%] -left-[5rem]"
+              icon={<RiBriefcase4Fill />}
+              endCountNum={1.5}
+              badgeText={"Years of experience"}
+            />
+            <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2">
+              <DevImg
+                containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
+                imgSrc="/hero/developer.png"
+              />
+            </div>
+          </div>
         </div>
         <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 animate-bounce">
           <RiArrowDownSLine className="text-3xl text-primary" />
